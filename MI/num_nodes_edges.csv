@@ -1,0 +1,9 @@
+study,Region,Filename,num_edges,avg_edge_weight,num_nodes
+Patients,cistern,002_XYZ.gml,6,0.853045347,6
+Patients,bone,002_XYZ.gml,33,0.753093926,10
+Patients,cc,002_XYZ.gml,46,0.720097972,13
+Patients,secondcistern,002_XYZ.gml,19,0.6830921,13
+Controls,cistern,HC_ABC.gml,14,0.73222999,7
+Controls,bone,HC_ABC.gml,52,0.760905154,12
+Controls,cc,HC_ABC.gml,28,0.739041962,10
+Controls,secondcistern,HC_ABC.gml,27,0.666772843,20

@@ -1,52 +1,69 @@
 # Graph Based Method and Radiomics Signature for Identification of Tuberculous Meningitis
-This repository is for code of Tuberculous Meningitis Classification between baseline patients and control using RoI patches from three regions, bone, corpus callosum, interpeduncular cistern
 
-![Sample Outputs](image/Image__2024-05-16__12-32-30_output_wLegend.png)
+This repository is for code of Tuberculous Meningitis Classification on baseline and controls using a graph based approach and validation using a Radiomics approach. The related paper is at:
 
-## Comparitive results for the Graph Based Approach
-![Sample Outputs](image/alpha.png)
-
-## Comparitive results for the Radiomics based approach
-![Sample Outputs](image/beta.png)
-
+https://arxiv.org/abs/2504.00943 
 
 ## Project Contacts
 
-Snigdha Agarwal (snigdha.agarwal@iiitb.ac.in)
+Snigdha Agarwal (snigdha.agarwal@iiib.ac.in)
 Jitender Saini (jsaini76@gmail.com)
 Neelam Sinha (neelamsinha@iisc.ac.in)
 
 ## Security and Permissions
 
-Images for this study are sourced internally from the Neurology Department of the National Insitute for Mental Health and Neuroscience, Bangalore, India. The images will be provided on request to any qualified researcher using the contacts below,
-Ganaraja VH
-Jiteder Saini
+The data is internal to the researchers and authors on this work. Please write to the project contacts duly stating the purpose for access to this data.
+
+## Set-Up
+
+We used python 3.10.6 (e.g., `/Users/.virtualenvs/3.10.6/bin/python`)
+
+#### Git clone
+
+```commandline
+git clone 
+```
+
+### Sample Data
+Sample data is shown for one subject from the patients and contols group as below,
+
+![Sample](image/figure-1.png)
+
+
+### Running the model (Graph Classification) for each region
+
+```commandline
+cd MI
+```
+The folder contains jupyter notebooks to run graph classification for each of bone, corpus callosum and interpeduncular cistern. THe folder also contains comparitive analysis code.
+
+Disclaimer: This folder contains sample .npy files  for one subject in the Baseline and Control.
+
+### Running the model for radiomics features classification
+
+This folder contains sample extracted radiomics features for one subject in each of patients and control groups.
+
+
+### Setting up virtualenv using venv (can use pipenv as well)
+
+```commandline
+python -m venv rad_tm
+source rad_tm/bin/activate
+cd Rad_TM
+pip install -r requirements.txt
+```
 
 ## Results
 
 ### Graph Based model with f1-score across all three regions is given below
 
-![Performance](image/alpha_performance.png)
+![Performance](image/perf1.png)
 
 ### Comparison with radiomics approach is given below
 
-![Performance](image/beta_performance.png)
+![Performancerad](image/perfrad.png)
 
-## Set-Up
+### Comparison with sota 
 
-We used python 3.10.9 (e.g., `/Users/snig/.pyenv/versions/3.10.9/bin/python`)
+![sota](image/sota.png)
 
-
-#### Git clone
-
-```commandline
-```
-
-### To run and evaluate the model on existing images
-
-Set up virtual environment using venv
-
-```commandline
-pip install pip==24.2
-pip install -r requirements.txt
-```
